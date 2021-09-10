@@ -53,7 +53,7 @@ export class ToolboxComponent implements OnInit {
   }
 
   checkWeb3() {
-    if (typeof web3 === 'undefined') {
+    if (typeof ethereum === 'undefined') {
       this.error('Error. Make sure you have a MetaMask plugin installed & refresh the page.');
     }
 

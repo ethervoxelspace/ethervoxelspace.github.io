@@ -11,7 +11,7 @@ export class AppComponent implements OnInit {
   noMetaMask = false;
 
   ngOnInit() {
-    if (typeof web3 === 'undefined') {
+    if (typeof ethereum === 'undefined') {
       this.noMetaMask = true;
     }
   }

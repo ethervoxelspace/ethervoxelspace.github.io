@@ -4,4 +4,4 @@ interface NodeModule {
   id: string;
 }
 declare var THREE;
-declare var web3;
+declare var ethereum;

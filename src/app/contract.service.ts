@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import Web3 = require('web3');
+import Web3 from 'web3';
 import { ABI } from './ABI';
 
 @Injectable()
@@ -35,8 +35,8 @@ export class ContractService {
 
   injectWeb3Provider(): Promise<boolean> {
     return new Promise<boolean>((resolve, reject) => {
-      if (typeof web3 !== 'undefined') {
-        this.web3 = new Web3(Web3.givenProvider);
+      if (typeof ethereum !== 'undefined') {
+        this.web3 = new Web3(ethereum);
 
         this.price = this.web3.utils.toWei('0.0001', 'ether');
 
